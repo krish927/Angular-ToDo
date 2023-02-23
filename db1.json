@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "todo": "Go to gym",
+      "id": 1
+    },
+    {
+      "todo": "take interview",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

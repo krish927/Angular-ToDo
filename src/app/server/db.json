@@ -1,0 +1,6 @@
+{
+    "todos": [
+      { "id": 1, "title": "Go to gym" },
+      { "id": 1, "title": "Learn Js" }
+    ]
+  }

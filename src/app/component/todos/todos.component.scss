@@ -1,0 +1,29 @@
+.todo-container{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+.title h2{
+    color: rebeccapurple;
+}
+.todo-container ul{
+    padding: 0;
+    width: 50%;
+}
+.todo-container ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.todo-container ul li p{
+    margin: 0;
+}
+
+.my-btn{
+    background: rebeccapurple;
+    border: none;
+}

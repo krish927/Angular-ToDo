@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+            <div class="todo-container">
+                <div class="title my-3">
+                    <h2>Todo</h2>
+                </div>
+                <form [formGroup]="form">
+                    <div class="mb-3 d-flex align-items-center">
+                        <div class="row w-100">
+                            <div class="col-md-8">
+                                <input formControlName="newTodo" type="text" class="form-control" id="todo">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary my-btn" (click)="addNewTodo()" [disabled]="form.invalid">Add Todo</button>
+                            </div>
+                        </div>
+                      </div>
+                </form>
+                <ul *ngIf="todoList.length>0">
+                    <li *ngFor="let todo of todoList" class="todo-item">
+                        <p>{{todo.todo}}</p>
+                        <button class="btn btn-primary my-btn" (click)="deleteTodo(todo.id)">Dalete</button>
+                    </li>
+                </ul>
+                <p *ngIf="todoList.length<=0">*There is no todo left, Add one...</p>
+            </div>
+        </div>
+    </div>

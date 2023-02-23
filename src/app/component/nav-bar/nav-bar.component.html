@@ -1,0 +1,21 @@
+<nav class="nav-bar py-2">
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="nav-links">
+                <div class="logo-area">
+                    <h4>My ToDo App</h4>
+                </div>
+                <div class="nav-link">
+                    <p>{{city}}</p>
+                </div>
+                <div class="nav-link">
+                    <button class="btn btn-primary nav-btn" *ngIf="signUp" (click)="signUpClick()" >Sign Up</button>
+                    <button class="btn btn-primary nav-btn" *ngIf="logIn" (click)="logInClick()">Log In</button>
+                    <button class="btn btn-primary nav-btn" *ngIf="logOut" (click)="logOutClick()">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</nav>

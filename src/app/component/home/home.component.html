@@ -1,0 +1,22 @@
+<div class="container" style="height: 90vh; width: 100%;">
+    <div class="row" style="height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;">
+        <div class="col-md-7">
+            <div class="home-img">
+                <img src="assets/istockphoto-1285308242-170667a.jpg">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-area">
+                <ng-container *ngIf="logIn">
+                    <app-login></app-login>
+                </ng-container>
+                <ng-container *ngIf="signUp">
+                    <app-sign-up></app-sign-up>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
