@@ -5,18 +5,23 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
       <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <p class="error" *ngIf="signUpForm.controls['email'].hasError('required') && signUpForm.controls['email'].touched">*Email is required</p>
+      <p class="error" *ngIf="signUpForm.controls['email'].hasError('email') && signUpForm.controls['email'].touched">Email is not valid</p>
     </div>
     <div class="mb-3">
         <label for="number" class="form-label">Number</label>
-        <input formControlName="number" type="text" class="form-control" id="number" aria-describedby="numberHelp">
+        <input formControlName="number" type="number" class="form-control" id="number" aria-describedby="numberHelp">
+        <p class="error" *ngIf="signUpForm.controls['number'].hasError('required') && signUpForm.controls['number'].touched">*Number is required</p>
       </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
       <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+      <p class="error" *ngIf="signUpForm.controls['password'].hasError('required') && signUpForm.controls['password'].touched" >*Password is required</p>
     </div>
     <div class="mb-3">
         <label for="confirmPassword" class="form-label">Confirm Password</label>
         <input formControlName="confirmPassword" type="password" class="form-control" id="confirmPassword">
+        <p class="error" *ngIf="signUpForm.controls['confirmPassword'].hasError('required') && signUpForm.controls['confirmPassword'].touched">*Confirm Password is required</p>
       </div>
     <button type="submit" (click)="signUpFormSubmit()" class="btn btn-primary" [disabled]="signUpForm.invalid">Sign Up</button>
 </form>

@@ -15,7 +15,7 @@ export class LoginComponent {
 
   ngOnInit() {
     this.loginForm = this.fb.group({
-      email: ['', Validators.required],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', Validators.required]
     });
   }
@@ -25,7 +25,7 @@ export class LoginComponent {
     console.log(this.loginForm.value);
     localStorage.setItem('token', JSON.stringify(this.loginForm.value.email));
     localStorage.setItem('userName', JSON.stringify(this.loginForm.value.email));
-    this.api.loggedIn(true);
+    this.api.loggedIn(true);  
     this.router.navigate(['/todos']);
   }
 }
